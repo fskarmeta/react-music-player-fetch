@@ -24,10 +24,15 @@ function App() {
       url: "files/mario/songs/overworld.mp3",
     },
   ]);
+
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [songId, changeSongId] = useState(0);
   const [hide, setHide] = useState(false)
+  const [volume, setVolume] = useState(0.5)
+ 
+
+
 
   useEffect(() => {
     fetch("https://assets.breatheco.de/apis/sound/songs")
@@ -46,6 +51,11 @@ function App() {
 
 
   let player = useRef(null);
+  
+  function volumeChange(value){
+    setVolume(value/100)
+    player.volume = volume
+    }
 
   function selectSong(i) {
     changeSongId(i);
@@ -122,6 +132,8 @@ if (error) {
         hider2={hider2}
         nextSong={nextSong}
         lastSong={lastSong}
+        volumeChange={volumeChange}
+        volume={volume}
       />
       <audio ref={(t) => (player = t)} src={`https://assets.breatheco.de/apis/sound/${
         songs[0].url
