@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #000000;
+    background-image: linear-gradient(360deg, #000000 0%, #5d5c66 32%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.over-container {
+  height: 60vh;
+  min-width: 20rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+ border-radius: 10px;
+ align-self: center;
+ border-radius: 20px;
+ margin: 5rem 0;
+ 
+}
+
+.audio-container {
+height: 50vh;
+min-width: 20rem;
+
+/* background-color: rgb(0, 0, 0); */
+background-color: #000000;
+background-image: linear-gradient(80deg, #000000 0%, #414141 98%);
+align-self: center;
+color: white;
+display: flex;
+flex-direction: column;
+overflow: auto;
+}
+
+.block {
+  min-width: 20rem;
+  
+  height: 2rem;
+  background-color: rgb(63, 55, 55);
+  border-bottom: 5px solid rgb(138, 126, 126);
+  border-bottom-style: ridge;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.player {
+  min-width: 20rem;
+  
+  height: 2.8rem;
+  background-color: rgb(63, 55, 55);
+  border-top: 10px solid rgb(138, 126, 126);
+  border-top-style: ridge;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.box {
+    /* background-color: rgba(240, 255, 255, 0.885); */
+    width: 100%;
+    display: flex;
+    height: 2.5rem;
+    border-bottom: 1px solid rgba(203, 196, 196, 0.263);
+    font-family: 'Josefin Sans', sans-serif;
+    cursor: pointer;
+    
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.song-id {
+    /* background-color: rgba(137, 43, 226, 0.701); */
+    display: flex;
+    width: 10%;
+    justify-content: center;
+    margin-top: 0.8rem;
+    color: rgba(152, 146, 146, 0.804)
+}
+
+.song-box {
+    display: flex;
+    width: 90%;
+    text-align: center;
+    margin-top: 0.8rem;
+}
+
+.song-text {
+   /* background-color: chocolate; */
+   padding-left: 0.5rem;
+}
+
+
+.box:hover {
+    background-color: rgba(174, 173, 173, 0.2);
+    
+}
+
+
+
+
+.player-icon {
+  display:flex;
+ width: 8rem;
+ color: rgb(0, 0, 0);
+ margin-top: 0.2rem;
+ /* background-color: yellow; */
+  /*Cambiar width a 11 rem cuando oculte play */
+}
+
+.player-icon i {
+  padding: 0 0.2rem;
+  cursor: pointer;
+}
+
+i:hover {
+  color: rgb(62, 40, 40);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(32, 30, 30); 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(98, 93, 93); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(34, 32, 32, 93);
 }
