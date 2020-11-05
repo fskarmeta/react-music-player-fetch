@@ -3,5 +3,5 @@
 
 You can find (hopefully still) a live version here <https://fskarmeta-music-player.netlify.app/>
 
-![Screenshot](./screenshot.png)
-![Alt Text](./gif.gif)
+![Screenshot](./screenshot1.png)
+![Alt Text](./gif2.gif)
