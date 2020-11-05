@@ -6,7 +6,7 @@ const Songs = (props) => {
         <div className="audio-container">
        {props.songs.map((e,i) => ( 
            <div className="box" key={i} style={props.colorItem(i)} onClick={() => props.selectSong(i)}>
-            <div className="song-id"><span className="song-id-text">{e.id}</span></div>
+            <div className="song-id"><span className="song-id-text">{i+1}</span></div>
             <div className="song-box"><span className="song-text" >{e.name}</span></div>
         </div>))}
     </div>
