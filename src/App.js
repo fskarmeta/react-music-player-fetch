@@ -93,9 +93,15 @@ function App() {
   function nextSong() {
     if (songId < songs.length - 1) {
       player.src = `https://assets.breatheco.de/apis/sound/${
-        songs[songId + 1].url
+        songs[songId +1].url
       }`;
       changeSongId(songId + 1);
+      player.play();
+    } else {
+      player.src = `https://assets.breatheco.de/apis/sound/${
+        songs[0].url
+      }`;
+      changeSongId(0);
       player.play();
     }
   }
